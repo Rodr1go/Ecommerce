@@ -22,7 +22,7 @@ public class LoginAction extends BaseLoginAction{
             return ERROR;
         }
         
-        if(!user.equals("user001") || !pass.equals("atnem")){
+        if(!user.equals("rodrigo") || !pass.equals("atnem")){
           return ERROR;  
         }
         

@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Clientes</title>
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/estilo.css" />
     </head>
@@ -28,19 +28,38 @@
             </nav>
 
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="#">home</a></li>
+                <li role="presentation"><a href="#">home</a></li>
                 <li role="presentation"><a href="EcommerceAction.cadProdutos.mtw">Produtos</a></li>
                 <li role="presentation"><a href="EcommerceAction.cadForn.mtw">Fornecedores</a></li>
                 <li role="presentation"><a href="EcommerceAction.clientes.mtw">Clientes</a></li>
-                <li role="presentation"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
-            </ul>
+                <li role="presentation" class="active"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
+            </ul>    
         </div>
 
         <div class="main">
             <div class="c1">
                 <!--<div class="div_img"><img src="images/img1.jpg" width="auto" height="300"/></div>-->
-                <h1>Administração do site.</h1>
-                
+                <!-- Tabela -->    
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <table class="table">
+                                <tbody>
+                                    <tr class="cab_tab">
+                                        <th>COD</th>
+                                        <th>CLIENTE</th>
+                                        <th>TOTAL</th>
+                                    </tr>
+                                    <tr>
+                                        <td><mtw:out value="" /></td>
+                                        <td><mtw:out value="cli" /></td>
+                                        <td><mtw:out value="total" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> <!-- fim da tabela-->
             </div>
         </div>
 

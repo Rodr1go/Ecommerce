@@ -41,10 +41,25 @@ public class AppManager extends ApplicationManager{
         action("/EcommerceAction", EcommerceAction.class, "produtos")
             .on(SUCCESS, fwd("/jsp/produtos.jsp"));
         
+        action("/EcommerceAction", EcommerceAction.class, "singlePage")
+            .on(SUCCESS, fwd("/jsp/single-page.jsp"));
+        
         action("/EcommerceAction", EcommerceAction.class, "login")
             .on(SUCCESS, fwd("/jsp/login.jsp"));
         
-        action("/EcommerceAction", EcommerceAction.class, "singlePage")
-            .on(SUCCESS, fwd("/jsp/single-page.jsp"));
+        /*----------------------------------------------------
+                            ADMINISTRATIVO
+        -----------------------------------------------------*/        
+        action("/EcommerceAction", EcommerceAction.class, "cadProdutos")
+            .on(SUCCESS, fwd("/jsp/adm/cadProdutos.jsp"));
+        
+        action("/EcommerceAction", EcommerceAction.class, "cadForn")
+            .on(SUCCESS, fwd("/jsp/adm/cadForn.jsp"));
+        
+        action("/EcommerceAction", EcommerceAction.class, "clientes")
+            .on(SUCCESS, fwd("/jsp/adm/clientes.jsp"));
+        
+        action("/EcommerceAction", EcommerceAction.class, "vendas")
+            .on(SUCCESS, fwd("/jsp/adm/vendas.jsp"));
    }    
 }

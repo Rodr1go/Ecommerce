@@ -15,7 +15,7 @@
         <script type="text/javascript">
             function redirect() 
             {
-                setTimeout("window.location='index.jsp'", 4000);
+                setTimeout("window.location='EcommerceAction.login.mtw'", 4000);
             }
         </script>
     </head>

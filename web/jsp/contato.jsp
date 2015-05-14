@@ -85,7 +85,7 @@
                         <div class="login-rigister">
                             <ul class="unstyled-list list-inline">
                                 <li><a class="login" href="EcommerceAction.login.mtw">Administração</a></li>
-                                <li><a class="rigister" href="#">CADASTRE-SE <span> </span></a></li>
+                                <!--<li><a class="rigister" href="#">CADASTRE-SE <span> </span></a></li>-->
                                 <div class="clearfix"> </div>
                             </ul>
                         </div>
@@ -101,10 +101,10 @@
                 <nav class="top-nav main-menu">
                     <ul class="top-nav">
                         <li><a href="EcommerceAction.produtos.mtw">PRODUTOS </a><span> </span></li>
-                        <li><a href="products.html">CAMPANHAS</a><span> </span></li>
-                        <li><a href="products.html">SERVIÇOS</a><span> </span></li>
-                        <li><a href="products.html">MARCAS</a><span> </span></li>
-                        <li><a href="products.html">SOBRE NÓS</a></li>
+                        <li><a href="#">CAMPANHAS</a><span> </span></li>
+                        <li><a href="#">SERVIÇOS</a><span> </span></li>
+                        <li><a href="#">MARCAS</a><span> </span></li>
+                        <li><a href="#">SOBRE NÓS</a></li>
                         <div class="clearfix"> </div>
                     </ul>
                     <a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
