@@ -6,7 +6,7 @@
 
 <%@taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<mtw:requiresAuthentication redir="true" />
+<mtw:requiresAuthentication />
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,10 +29,10 @@
 
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="#">home</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadProdutos.mtw">Produtos</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadForn.mtw">Fornecedores</a></li>
-                <li role="presentation"><a href="EcommerceAction.clientes.mtw">Clientes</a></li>
-                <li role="presentation" class="active"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
+                <li role="presentation"><a href="ProdutoAction.cadProdutos.mtw">Produtos</a></li>
+                <li role="presentation"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
+                <li role="presentation"><a href="ClienteAction.listarClientes.mtw">Clientes</a></li>
+                <li role="presentation" class="active"><a href="VendaAction.vendas.mtw">Vendas</a></li>
             </ul>    
         </div>
 
@@ -50,11 +50,17 @@
                                         <th>CLIENTE</th>
                                         <th>TOTAL</th>
                                     </tr>
-                                    <tr>
-                                        <td><mtw:out value="" /></td>
-                                        <td><mtw:out value="cli" /></td>
-                                        <td><mtw:out value="total" /></td>
-                                    </tr>
+                                    
+                                    <mtw:list value="lista">
+                                        <mtw:loop var="v">
+                                            <tr>
+                                                <td><mtw:out value="v.codigo" /></td>
+                                                <td><mtw:out value="v.nome" /></td>
+                                                <td><mtw:out value="v.total" /></td>
+                                            </tr>
+                                        </mtw:loop> 
+                                    </mtw:list>
+                                    
                                 </tbody>
                             </table>
                         </div>

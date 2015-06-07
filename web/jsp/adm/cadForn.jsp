@@ -6,7 +6,7 @@
 
 <%@taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<mtw:requiresAuthentication redir="true" />
+<mtw:requiresAuthentication />
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,12 +26,12 @@
                     <a href="LogoutAction.execute.mtw" ><img src="images/logout.png" alt="logout"/></a>
                 </div>
             </nav>
-                
+
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="#">home</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadProdutos.mtw">Produtos</a></li>
-                <li role="presentation" class="active"><a href="EcommerceAction.cadForn.mtw">Fornecedores</a></li>
-                <li role="presentation"><a href="EcommerceAction.clientes.mtw">Clientes</a></li>
+                <li role="presentation"><a href="ProdutoAction.cadProdutos.mtw">Produtos</a></li>
+                <li role="presentation" class="active"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
+                <li role="presentation"><a href="ClienteAction.listarClientes.mtw">Clientes</a></li>
                 <li role="presentation"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
             </ul>    
         </div>
@@ -42,16 +42,16 @@
                 <div class="titulo_form">
                     <h3>Cadastro de fornecedores<hr></h3>
                 </div>
-                <form method="post" action="#" class="form1">
+                <form method="post" action="FornecedorAction.salvar.mtw" class="form1">
                     <p>
                         Desc : 
-                        <mtw:input type="text" size="40" name="desc" />
+                        <mtw:input type="text" size="40" name="descricao" />
                     </p>
                     <p>
                         CNPJ : 
                         <mtw:input type="text" size="40" name="cnpj" />
                     </p>
-                    
+
                     <p>
                         TEL :
                         <mtw:input type="text" size="40" name="tel" />   
@@ -63,7 +63,7 @@
                     <input type="submit" value="Cadastrar fornecedores" class="btn btn-info"/>
                     <!--<a href="#" class="btn btn-info">Listar cadastros</a> -->
                 </form>
-                    
+
                 <!-- Tabela -->    
                 <div class="container">
                     <div class="row">
@@ -77,24 +77,28 @@
                                         <th>TEL</th>
                                         <th>END</th>
                                     </tr>
-                                    <tr>
-                                        <td><mtw:out value="" /></td>
-                                        <td><mtw:out value="desc" /></td>
-                                        <td><mtw:out value="cnpj" /></td>
-                                        <td><mtw:out value="tel" /></td>
-                                        <td><mtw:out value="end" /></td>
-                                    </tr>
+                                    <mtw:list value="lista">
+                                        <mtw:loop var="f">    
+                                            <tr>
+                                                <td><mtw:out value="f.codigo" /></td>
+                                                <td><mtw:out value="f.descricao" /></td>
+                                                <td><mtw:out value="f.cnpj" /></td>
+                                                <td><mtw:out value="f.tel" /></td>
+                                                <td><mtw:out value="f.end" /></td>
+                                            </tr>
+                                        </mtw:loop>
+                                    </mtw:list>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div> <!-- fim da tabela-->    
             </div>
+            
+           <div class="footer">
+            <p>Copyright © 2015</p>
+           </div>
         </div>
 
-        <div class="footer">
-            <p>Copyright © 2015</p>
-        </div>
-        <!--</div> -->
     </body>
 </html>

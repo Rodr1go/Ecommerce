@@ -7,7 +7,7 @@ html, body {
 
 .main {
     //border: 1px solid #e5e5e5;
-    width: 90%;
+    width: 95%;
     height: 445px;
     margin-top: 102px;
 }
@@ -166,9 +166,9 @@ hr{margin-top: 1px;}
 
 .footer{
     background: #202020;
-    width: 100%;
+    width: 105.3%;
     height: 100px;
-    margin-top: 200px;
+    margin-top: 40%;
 }
 .footer p{
     text-align: center;
@@ -186,7 +186,7 @@ hr{margin-top: 1px;}
 }
 .table{
     position:relative;
-    left: 15%;
+    left: 0%;
     right:10%;
     width: 1000px;
     height:auto;

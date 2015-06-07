@@ -6,11 +6,21 @@ package org.ecommerce.modelo;
  */
 public class Produtos {
     private int codigo;
-    private String desc;
-    private String marca;
+    private String descricao;
+    private int quantidade;
     private Double preco;
-    //private Fornecedor forn = new Fornecedor();
+    
+    private int cod_forn; //FK
+    private Fornecedor forn = null;
 
+    public Produtos(){
+        
+    }
+    
+    public Produtos(int codigo){
+        this.codigo = codigo;
+    }
+    
     public int getCodigo() {
         return codigo;
     }
@@ -19,20 +29,12 @@ public class Produtos {
         this.codigo = codigo;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public Double getPreco() {
@@ -43,11 +45,27 @@ public class Produtos {
         this.preco = preco;
     }
 
-    /*public Fornecedor getForn() {
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+    
+    public int getCod_forn() {
+        return cod_forn;
+    }
+
+    public void setCod_forn(int cod_forn) {
+        this.cod_forn = cod_forn;
+    }
+
+    public Fornecedor getForn() {
         return forn;
     }
 
     public void setForn(Fornecedor forn) {
         this.forn = forn;
-    }*/
+    }
 }

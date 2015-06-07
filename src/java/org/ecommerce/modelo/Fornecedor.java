@@ -6,11 +6,19 @@ package org.ecommerce.modelo;
  */
 public class Fornecedor {
    private int codigo;
-   private String desc;
+   private String descricao;
    private String cnpj;
    private String tel;
    private String end;
 
+   public Fornecedor(){
+       
+   }
+   
+   public Fornecedor(int codigo){
+       this.codigo = codigo;
+   }
+   
     public int getCodigo() {
         return codigo;
     }
@@ -19,12 +27,12 @@ public class Fornecedor {
         this.codigo = codigo;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public String getCnpj() {

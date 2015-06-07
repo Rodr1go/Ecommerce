@@ -6,7 +6,7 @@
 
 <%@taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<mtw:requiresAuthentication redir="true" />
+<mtw:requiresAuthentication />
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,10 +29,10 @@
 
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="#">home</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadProdutos.mtw">Produtos</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadForn.mtw">Fornecedores</a></li>
+                <li role="presentation"><a href="ProdutoAction.cadProdutos.mtw">Produtos</a></li>
+                <li role="presentation"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
                 <li role="presentation" class="active"><a href="#">Clientes</a></li>
-                <li role="presentation"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
+                <li role="presentation"><a href="VendaAction.vendas.mtw">Vendas</a></li>
             </ul>    
         </div>
 
@@ -41,6 +41,7 @@
                 <!--<div class="div_img"><img src="images/img1.jpg" width="auto" height="300"/></div>-->
                 <!-- Tabela -->    
                 <div class="container">
+
                     <div class="row">
                         <div class="col-md-4">
                             <table class="table">
@@ -51,23 +52,29 @@
                                         <th>NOME</th>
                                         <th>END</th>
                                     </tr>
-                                    <tr>
-                                        <td><mtw:out value="" /></td>
-                                        <td><mtw:out value="cpf" /></td>
-                                        <td><mtw:out value="nome" /></td>
-                                        <td><mtw:out value="end" /></td>
-                                    </tr>
+
+                                    <mtw:list value="lista">
+                                        <mtw:loop var="c">
+                                            <tr>
+                                                <td><mtw:out value="c.codigo" /></td>
+                                                <td><mtw:out value="c.cpf" /></td>
+                                                <td><mtw:out value="c.nome" /></td>
+                                                <td><mtw:out value="c.end" /></td>
+                                            </tr>
+                                        </mtw:loop> 
+                                    </mtw:list>
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div> <!-- fim da tabela-->
             </div>
+            
+            <div class="footer">
+                <p>Copyright © 2015</p>
+            </div>
         </div>
 
-        <div class="footer">
-            <p>Copyright © 2015</p>
-        </div>
-        <!--</div> -->
     </body>
 </html>

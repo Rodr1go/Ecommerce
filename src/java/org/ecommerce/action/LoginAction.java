@@ -27,7 +27,7 @@ public class LoginAction extends BaseLoginAction{
         }
         
         setSessionObj(user);
-        output.setValue(user, "user");
+        output.setValue("user", getSessionObj());
         
         return SUCCESS;
     }

@@ -6,7 +6,7 @@
 
 <%@taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<mtw:requiresAuthentication redir="true" />
+<mtw:requiresAuthentication />
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,10 +29,10 @@
 
             <ul class="nav nav-pills">
                 <li role="presentation"><a href="#">home</a></li>
-                <li role="presentation" class="active"><a href="EcommerceAction.cadProdutos.mtw">Produtos</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadForn.mtw">Fornecedores</a></li>
-                <li role="presentation"><a href="EcommerceAction.clientes.mtw">Clientes</a></li>
-                <li role="presentation"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
+                <li role="presentation" class="active"><a href="#">Produtos</a></li>
+                <li role="presentation"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
+                <li role="presentation"><a href="ClienteAction.listarClientes.mtw">Clientes</a></li>
+                <li role="presentation"><a href="VendaAction.vendas.mtw">Vendas</a></li>
             </ul>    
         </div>
 
@@ -42,24 +42,39 @@
                 <div class="titulo_form">
                     <h3>Cadastro de produtos<hr></h3>
                 </div>
-                <form method="post" action="EcommerceAction.cadProdutos.mtw" class="form1">
+                <form method="post" action="ProdutoAction.salvar.mtw" class="form1">
                     <p>
                         Desc : 
-                        <mtw:input type="text" size="40" name="desc" />
+                        <mtw:input type="text" size="40" name="descricao" />
                     </p>
                     <p>
-                        Marca : 
-                        <mtw:input type="text" size="40" name="marca" />
+                        Preço : 
+                        <mtw:input type="text" size="40" name="preco" />
                     </p>
 
                     <p>
-                        Preço :
-                        <mtw:input type="text" size="40" name="preco" />   
+                        Quant. :
+                        <mtw:input type="text" size="40" name="quantidade" />   
                     </p>
-                    <!--<p>
-                        Forn :
-                    <mtw:input type="text" size="40" name="forn" />   
-                    </p>-->
+                    <p>
+                        Forn : 
+                        <select name="cod_forn" size="1" >
+                            <option value="0">Escolha uma opção</option>
+                            <option value="1">Adidas</option>
+                            <option value="2">Camper</option>
+                            <option value="3">Converse</option>
+                            <option value="4">Dockers</option>
+                            <option value="5">Kinetix</option>
+                            <option value="6">Lacoste</option>
+                            <option value="7">Nike</option>
+                            <option value="8">New balance</option>
+                            <option value="9">Puma</option>
+                            <option value="10">Tiger</option>
+                            <option value="11">Timberland</option>
+                        </select>
+
+                        <!-- Consertar o erro -->  
+                    </p>
                     <input  type="submit" value="Cadastrar produtos" class="btn btn-info"/>
                     <!--<a href="#" class="btn btn-info">Listar cadastros</a> -->
                 </form>
@@ -73,26 +88,33 @@
                                     <tr class="cab_tab">
                                         <th>COD</th>
                                         <th>DESC</th>
-                                        <th>MARCA</th>
                                         <th>PREÇO</th>
+                                        <th>QTD.</th>
                                     </tr>
-                                    <tr>
-                                        <td><mtw:out value="" /></td>
-                                        <td><mtw:out value="desc" /></td>
-                                        <td><mtw:out value="marca" /></td>
-                                        <td><mtw:out value="preco" /></td>
-                                    </tr>
+
+                                    <mtw:list value="lista">
+                                        <mtw:loop var="p">
+                                            <tr>
+                                                <td><mtw:out value="p.codigo" /></td>
+                                                <td><mtw:out value="p.descricao" /></td>
+                                                <td><mtw:out value="p.preco" /></td>
+                                                <td><mtw:out value="p.quantidade" /></td>
+                                            </tr>
+                                        </mtw:loop> 
+                                    </mtw:list>
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div> <!-- fim da tabela-->
             </div>
+
+            <div class="footer">
+                <p>Copyright © 2015</p>
+            </div>
         </div>
 
-        <div class="footer">
-            <p>Copyright © 2015</p>
-        </div>
-        <!--</div> -->
+
     </body>
 </html>

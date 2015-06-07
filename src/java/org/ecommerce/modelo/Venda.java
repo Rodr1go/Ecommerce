@@ -1,14 +1,17 @@
 package org.ecommerce.modelo;
 
+import java.util.Date;
+
 /**
  *
  * @author stryker
  */
 public class Venda {
    private int codigo;
-   private Cliente cli = new Cliente();
    private Double total;
-
+   private Date horario ;
+   private Cliente cli = new Cliente();
+   
     public int getCodigo() {
         return codigo;
     }
@@ -17,12 +20,12 @@ public class Venda {
         this.codigo = codigo;
     }
 
-    public Cliente getCli() {
-        return cli;
+    public Date getHorario() {
+        return horario;
     }
 
-    public void setCli(Cliente cli) {
-        this.cli = cli;
+    public void setHorario(Date horario) {
+        this.horario = horario;
     }
 
     public Double getTotal() {
@@ -33,5 +36,13 @@ public class Venda {
         this.total = total;
     }
    
-   
+   public Cliente getCli() {
+        return cli;
+    }
+
+    public void setCli(Cliente cli) {
+        this.cli = cli;
+    }
+
+    
 }

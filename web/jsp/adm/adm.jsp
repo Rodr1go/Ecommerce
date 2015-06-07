@@ -4,9 +4,9 @@
     Author     : stryker
 --%>
 
-<%@taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<mtw:requiresAuthentication redir="true" />
+<%@taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/"%>
+<mtw:requiresAuthentication />
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +20,7 @@
         <div class="header">
             <nav id="menu">
                 <span class="info">Bem Vindo</span>
-                <span class="name" ><mtw:out value="user"/></span>
+                <span class="name"><mtw:out value="user"/></span>
                 <div class="avatar"><a href="index.jsp"><img class="img_a" src="images/avatar.png" alt="avatar" /></a></div>
                 <div class="logout">
                     <a href="LogoutAction.execute.mtw" ><img src="images/logout.png" alt="logout"/></a>
@@ -29,9 +29,9 @@
 
             <ul class="nav nav-pills">
                 <li role="presentation" class="active"><a href="#">home</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadProdutos.mtw">Produtos</a></li>
-                <li role="presentation"><a href="EcommerceAction.cadForn.mtw">Fornecedores</a></li>
-                <li role="presentation"><a href="EcommerceAction.clientes.mtw">Clientes</a></li>
+                <li role="presentation"><a href="ProdutoAction.cadProdutos.mtw">Produtos</a></li>
+                <li role="presentation"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
+                <li role="presentation"><a href="ClienteAction.listarClientes.mtw">Clientes</a></li>
                 <li role="presentation"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
             </ul>
         </div>
@@ -42,11 +42,11 @@
                 <h1>Administração do site.</h1>
                 
             </div>
+            
+            <div class="footer">
+              <p>Copyright © 2015</p>
+            </div>
         </div>
 
-        <div class="footer">
-            <p>Copyright © 2015</p>
-        </div>
-        <!--</div> -->
     </body>
 </html>

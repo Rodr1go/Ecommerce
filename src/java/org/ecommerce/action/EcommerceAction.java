@@ -19,8 +19,8 @@ public class EcommerceAction extends BaseAction{
         return SUCCESS;
     }
     
-    public String singlePage(){
-        return SUCCESS;
+    public String cadClientes(){
+       return SUCCESS; 
     }
     
     public String login(){
@@ -30,7 +30,7 @@ public class EcommerceAction extends BaseAction{
     /************************************************
     *           Códigos Administração           
     *************************************************/
-    public String cadProdutos(){
+    /*public String cadProdutos(){
         
         Produtos prod = new Produtos();
         prod.setDesc(input.getString("desc"));
@@ -60,5 +60,5 @@ public class EcommerceAction extends BaseAction{
         Venda venda = new Venda();
         venda.setTotal(input.getDouble("total"));
         return SUCCESS;
-    }
+    }*/
 }

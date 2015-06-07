@@ -75,7 +75,7 @@
                             <ul class="unstyled-list list-inline">
                                 <li><span class="cart"> </span>
                                     <ul class="cart-sub">
-                                        <li><p>0 Products</p></li>
+                                        <li><p>0 Produtos</p></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -98,7 +98,7 @@
                 <!----start-top-nav---->
                 <nav class="top-nav main-menu">
                     <ul class="top-nav">
-                        <li><a href="EcommerceAction.produtos.mtw">PRODUTOS </a><span> </span></li>
+                        <li><a href="ProdutoAction.produtos.mtw">PRODUTOS </a><span> </span></li>
                         <li><a href="#">CAMPANHAS</a><span> </span></li>
                         <li><a href="#">SERVIÇOS</a><span> </span></li>
                         <li><a href="#">MARCAS</a><span> </span></li>
@@ -295,7 +295,7 @@
                             <div class="product-price">
                                 <div class="product-price-left text-right">
                                     <span>R$ 174.00</span>
-                                    <h5>R$ 109.00</h5>
+                                    <h5>R$ <mtw:out value="prod"/>0 </h5>
                                 </div>
                                 <div class="product-price-right">
                                     <a href="#"><span> </span></a>
@@ -309,18 +309,18 @@
                                 <div class="clearfix"> </div>
                                 <div class="product-size-qty">
                                     <div class="pro-size"> 
-                                        <span>Size:</span>
+                                        <span>Tamanho:</span>
                                         <select>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
+                                            <option>38</option>
+                                            <option>39</option>
+                                            <option>40</option>
+                                            <option>41</option>
+                                            <option>42</option>
                                         </select>
                                     </div>
                                     <div class="pro-qty">
-                                        <span>Qty:</span>
-                                        <select>
+                                        <span>Qtd:</span>
+                                        <select >
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
@@ -333,7 +333,7 @@
                                 <div class="clearfix"> </div>
                                 <div class="product-cart-share">
                                     <div class="add-cart-btn">
-                                        <input type="button" value="Add to cart" />
+                                        <a href="ItensAction.salvar.mtw?id=11" style="text-decoration: none"><input type="button" value="Add to cart" /></a>
                                     </div>
                                     <ul class="product-share text-right">
                                         <h3>Share This:</h3>

@@ -6,8 +6,9 @@ package org.ecommerce.modelo;
  */
 public class Cliente {
    private int codigo;
-   private String cpf;
    private String nome;
+   private String cpf;
+   private String tel; 
    private String end;
 
     public int getCodigo() {
@@ -34,6 +35,14 @@ public class Cliente {
         this.nome = nome;
     }
 
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+    
     public String getEnd() {
         return end;
     }
