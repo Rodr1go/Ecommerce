@@ -294,12 +294,12 @@
                             </div>
                             <div class="product-price">
                                 <div class="product-price-left text-right">
-                                    <span>R$ 174.00</span>
-                                    <h5>R$ <mtw:out value="prod"/>0 </h5>
+                                    <span>R$ <mtw:out value="prod"/>0</span>
+                                    <h5>R$ <mtw:out value="desconto"/> </h5>
                                 </div>
                                 <div class="product-price-right">
                                     <a href="#"><span> </span></a>
-                                    <label> save <b>40%</b></label>
+                                    <label> economia de <b>20%</b></label>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
@@ -333,7 +333,7 @@
                                 <div class="clearfix"> </div>
                                 <div class="product-cart-share">
                                     <div class="add-cart-btn">
-                                        <a href="ItensAction.salvar.mtw?id=11" style="text-decoration: none"><input type="button" value="Add to cart" /></a>
+                                        <a href="VendasAction.salvar.mtw?id=<mtw:out value="id"/>" style="text-decoration: none"><input type="button" value="Add to cart" /></a>
                                     </div>
                                     <ul class="product-share text-right">
                                         <h3>Share This:</h3>

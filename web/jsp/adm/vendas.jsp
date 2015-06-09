@@ -28,11 +28,11 @@
             </nav>
 
             <ul class="nav nav-pills">
-                <li role="presentation"><a href="#">home</a></li>
+                <li role="presentation"><a href="EcommerceAction.home.mtw">home</a></li>
                 <li role="presentation"><a href="ProdutoAction.cadProdutos.mtw">Produtos</a></li>
                 <li role="presentation"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
                 <li role="presentation"><a href="ClienteAction.listarClientes.mtw">Clientes</a></li>
-                <li role="presentation" class="active"><a href="VendaAction.vendas.mtw">Vendas</a></li>
+                <li role="presentation" class="active"><a href="VendasAction.listarVendas.mtw">Vendas</a></li>
             </ul>    
         </div>
 
@@ -46,8 +46,10 @@
                             <table class="table">
                                 <tbody>
                                     <tr class="cab_tab">
-                                        <th>COD</th>
-                                        <th>CLIENTE</th>
+                                        <th>Código da venda</th>
+                                        <th>Codigo do produto</th>
+                                        <th>Qtd. de produtos</th>
+                                        <th>Codigo do cliente</th>
                                         <th>TOTAL</th>
                                     </tr>
                                     
@@ -55,8 +57,10 @@
                                         <mtw:loop var="v">
                                             <tr>
                                                 <td><mtw:out value="v.codigo" /></td>
-                                                <td><mtw:out value="v.nome" /></td>
-                                                <td><mtw:out value="v.total" /></td>
+                                                <td><mtw:out value="v.cod_prod" /></td>
+                                                <td><mtw:out value="v.ite_quantidade" /></td>
+                                                <td><mtw:out value="v.cod_cli" /></td>
+                                                <td><mtw:out value="v.ite_valor_parcial" /></td>
                                             </tr>
                                         </mtw:loop> 
                                     </mtw:list>

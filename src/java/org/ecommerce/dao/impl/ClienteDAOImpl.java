@@ -33,4 +33,16 @@ public class ClienteDAOImpl implements ClienteDAO {
         List<Cliente> lista = beanSession.loadList(c);
         return lista;
     }
+    
+    @Override
+    public Cliente buscarPorCodigo(int codigo) {
+        
+        Cliente cli = new Cliente(codigo);
+        boolean ok = beanSession.load(cli);
+        if (ok) {
+            return cli;
+        } else {
+            return null;
+        }
+    }
 }

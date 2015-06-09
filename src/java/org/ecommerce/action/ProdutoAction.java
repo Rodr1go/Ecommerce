@@ -1,5 +1,6 @@
 package org.ecommerce.action;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import org.ecommerce.dao.ProdutoDAO;
 import org.ecommerce.modelo.Produtos;
@@ -12,12 +13,10 @@ import org.mentawai.core.BaseAction;
  */
 public class ProdutoAction extends BaseAction{
     
-    private ProdutoDAO dao;
-    //private FornecedorDAO f_dao;
+    private final ProdutoDAO dao;
     
-    public ProdutoAction(ProdutoDAO dao/*, FornecedorDAO f_dao*/) {
+    public ProdutoAction(ProdutoDAO dao) {
         this.dao = dao;
-        //this.f_dao = f_dao;
     }
     
     //single page
@@ -25,6 +24,13 @@ public class ProdutoAction extends BaseAction{
         int id = input.getInt("id");
         Produtos prod = dao.buscarPorCodigo(id);
         output.setValue("prod", prod.getPreco());
+        output.setValue("id", id);
+        
+        DecimalFormat df = new DecimalFormat("0.##");
+        double calc = prod.getPreco() * 0.8;
+        String desconto = df.format(calc);
+        
+        output.setValue("desconto", desconto);
         return SUCCESS;
     }
     
@@ -32,18 +38,31 @@ public class ProdutoAction extends BaseAction{
          List<Produtos> lista = dao.listarTodos();
          output.setValue("lista", lista);
          output.setValue("user", getSessionObj()); //exibe o nome de usuário na página
-         /*List<Fornecedor> f_lista = f_dao.listarTodos();
-         output.setValue("f_lista", f_lista);*/
+         
       return SUCCESS;  
     }
     
     public String salvar(){
-        
         Produtos p = input.getObject(Produtos.class);
-        
         dao.salvar(p);
         output.setObject(p);
         
+        List<Produtos> lista = dao.listarTodos();
+         output.setValue("lista", lista);
+         output.setValue("user", getSessionObj()); 
+        
        return SUCCESS;
+    }
+    
+    public String excluir(int codigo) {
+        int id = input.getInt("id");
+        Produtos prod = dao.buscarPorCodigo(id);
+        dao.excluir(prod.getCodigo());
+        
+        List<Produtos> lista = dao.listarTodos();
+         output.setValue("lista", lista);
+         output.setValue("user", getSessionObj());
+        
+        return SUCCESS;
     }
 }

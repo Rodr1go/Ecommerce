@@ -234,52 +234,52 @@
                     <!----special-products-grids---->
                     <div class="special-products-grids">
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=11"><img src="images/b1.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=11"><img src="images/p1.jpg" title="product-name" /></a>
-                            <h4><a href="ProdutoAction.singlepage.mtw?cod=11">Nike Roshe Run</a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=11"><span>R$ 109.90</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=1"><img src="images/b1.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=1"><img src="images/p1.jpg" title="product-name" /></a>
+                            <h4><a href="ProdutoAction.singlepage.mtw?cod=1">Nike Roshe Run</a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=1"><span>R$ 109.90</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw"><img src="images/b2.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw"><img src="images/p2.jpg" title="product-name" /></a>
-                            <h4><a href="ProdutoAction.singlePage.mtw">Line Link 67009</a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw"><span>R$ 129.90</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=2"><img src="images/b2.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?=2"><img src="images/p2.jpg" title="product-name" /></a>
+                            <h4><a href="ProdutoAction.singlePage.mtw?id=2">Line Link 67009</a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=2"><span>R$ 129.90</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw"><img src="images/b3.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw"><img src="images/p3.jpg" title="product-name" /></a>
-                            <h4><a href="ProdutoAction.singlePage.mtw">Minimus Zero </a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw"><span>R$ 170.00</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=3"><img src="images/b3.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=3"><img src="images/p3.jpg" title="product-name" /></a>
+                            <h4><a href="ProdutoAction.singlePage.mtw?id=3">Minimus Zero </a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=3"><span>R$ 170.00</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw"><img src="images/b4.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw"><img src="images/p4.jpg" title="product-name" /></a>
-                            <h4><a href="ProdutoAction.singlePage.mtw"> Athletic Shoe </a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw"><span>R$ 199.90</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=4"><img src="images/b4.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=4"><img src="images/p4.jpg" title="product-name" /></a>
+                            <h4><a href="ProdutoAction.singlePage.mtw?id=4"> Athletic Shoe </a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=4"><span>R$ 199.90</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw"><img src="images/b5.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw"><img src="images/p2.jpg" title="product-name" /></a>
-                            <h4><a href="ProdutoAction.singlePage.mtw">Veronique </a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw"><span>R$ 109.90</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=5"><img src="images/b5.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=5"><img src="images/p2.jpg" title="product-name" /></a>
+                            <h4><a href="ProdutoAction.singlePage.mtw?id=5">Veronique </a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=5"><span>R$ 109.90</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw"><img src="images/b6.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw"><img src="images/p6.jpg" title="product-name" /></a>
-                            <h4><a href="ProdutoAction.singlePage.mtw">Suede Boots </a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw"><span>R$ 150.00</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=6"><img src="images/b6.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=6"><img src="images/p6.jpg" title="product-name" /></a>
+                            <h4><a href="ProdutoAction.singlePage.mtw?id=6">Suede Boots </a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=6"><span>R$ 150.00</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw"><img src="images/b7.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw"><img src="images/p7.jpg" title="product-name" /></a>
-                            <h4><a href="ProdutoAction.singlePage.mtw">Barricade 6.0  </a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw"><span>R$ 170.90</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=7"><img src="images/b7.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=7"><img src="images/p7.jpg" title="product-name" /></a>
+                            <h4><a href="ProdutoAction.singlePage.mtw??id=7">Barricade 6.0  </a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=7"><span>R$ 170.90</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="col-md-3 special-products-grid text-center">
-                            <a class="brand-name" href="ProdutoAction.singlePage.mtw"><img src="images/b1.jpg" title="name" /></a>
-                            <a class="product-here" href="ProdutoAction.singlePage.mtw"><img src="images/p8.jpg" title="product-name" /></a>
-                            <h4><a href="EcommerceAction.singlePage.mtw">Cotu Classic </a></h4>
-                            <a class="product-btn" href="ProdutoAction.singlePage.mtw"><span>R$ 199.90</span><small>Comprar</small><label> </label></a>
+                            <a class="brand-name" href="ProdutoAction.singlePage.mtw?id=8"><img src="images/b1.jpg" title="name" /></a>
+                            <a class="product-here" href="ProdutoAction.singlePage.mtw?id=8"><img src="images/p8.jpg" title="product-name" /></a>
+                            <h4><a href="EcommerceAction.singlePage.mtw?id=8">Cotu Classic </a></h4>
+                            <a class="product-btn" href="ProdutoAction.singlePage.mtw?id=8"><span>R$ 199.90</span><small>Comprar</small><label> </label></a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>

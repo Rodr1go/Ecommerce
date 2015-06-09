@@ -29,7 +29,6 @@
 
         <div class="main">
             <div class="c1">
-                <!--<div class="div_img"><img src="images/img1.jpg" width="auto" height="300"/></div>-->
                 <div class="titulo_form">
                     <h3>Cadastro de Clientes<hr></h3>
                 </div>

@@ -11,6 +11,14 @@ public class Cliente {
    private String tel; 
    private String end;
 
+   public Cliente(){
+       
+   }
+   
+   public Cliente(int codigo){
+       this.codigo = codigo;
+   }
+   
     public int getCodigo() {
         return codigo;
     }

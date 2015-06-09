@@ -45,4 +45,12 @@ public class ProdutoDAOImpl implements ProdutoDAO{
             return null;
         }
     }
+    
+    @Override
+    public boolean excluir(int codigo) {
+        Produtos prod = new Produtos(codigo);
+        
+        beanSession.delete(prod);
+        return true;
+    }
 }

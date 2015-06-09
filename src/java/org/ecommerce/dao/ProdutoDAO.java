@@ -14,4 +14,6 @@ public interface ProdutoDAO {
     public List<Produtos> listarTodos();
     
     public Produtos buscarPorCodigo(int codigo);
+    
+    public boolean excluir(int codigo);
 }

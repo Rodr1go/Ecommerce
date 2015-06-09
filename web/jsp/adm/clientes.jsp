@@ -28,11 +28,11 @@
             </nav>
 
             <ul class="nav nav-pills">
-                <li role="presentation"><a href="#">home</a></li>
+                <li role="presentation"><a href="EcommerceAction.home.mtw">home</a></li>
                 <li role="presentation"><a href="ProdutoAction.cadProdutos.mtw">Produtos</a></li>
                 <li role="presentation"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
                 <li role="presentation" class="active"><a href="#">Clientes</a></li>
-                <li role="presentation"><a href="VendaAction.vendas.mtw">Vendas</a></li>
+                <li role="presentation"><a href="VendasAction.listarVendas.mtw">Vendas</a></li>
             </ul>    
         </div>
 

@@ -28,17 +28,16 @@
             </nav>
 
             <ul class="nav nav-pills">
-                <li role="presentation"><a href="#">home</a></li>
+                <li role="presentation"><a href="EcommerceAction.home.mtw">home</a></li>
                 <li role="presentation"><a href="ProdutoAction.cadProdutos.mtw">Produtos</a></li>
                 <li role="presentation" class="active"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
                 <li role="presentation"><a href="ClienteAction.listarClientes.mtw">Clientes</a></li>
-                <li role="presentation"><a href="EcommerceAction.vendas.mtw">Vendas</a></li>
+                <li role="presentation"><a href="VendasAction.listarVendas.mtw">Vendas</a></li>
             </ul>    
         </div>
 
         <div class="main">
             <div class="c1">
-                <!--<div class="div_img"><img src="images/img1.jpg" width="auto" height="300"/></div>-->
                 <div class="titulo_form">
                     <h3>Cadastro de fornecedores<hr></h3>
                 </div>

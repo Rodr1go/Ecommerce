@@ -28,11 +28,11 @@
             </nav>
 
             <ul class="nav nav-pills">
-                <li role="presentation"><a href="#">home</a></li>
+                <li role="presentation"><a href="EcommerceAction.home.mtw">home</a></li>
                 <li role="presentation" class="active"><a href="#">Produtos</a></li>
                 <li role="presentation"><a href="FornecedorAction.cadForn.mtw">Fornecedores</a></li>
                 <li role="presentation"><a href="ClienteAction.listarClientes.mtw">Clientes</a></li>
-                <li role="presentation"><a href="VendaAction.vendas.mtw">Vendas</a></li>
+                <li role="presentation"><a href="VendasAction.listarVendas.mtw">Vendas</a></li>
             </ul>    
         </div>
 
@@ -71,6 +71,7 @@
                             <option value="9">Puma</option>
                             <option value="10">Tiger</option>
                             <option value="11">Timberland</option>
+                            <option value="12">Superga</option>
                         </select>
 
                         <!-- Consertar o erro -->  
@@ -90,6 +91,7 @@
                                         <th>DESC</th>
                                         <th>PREÇO</th>
                                         <th>QTD.</th>
+                                        <th>OPÇÕES</th>
                                     </tr>
 
                                     <mtw:list value="lista">
@@ -99,6 +101,7 @@
                                                 <td><mtw:out value="p.descricao" /></td>
                                                 <td><mtw:out value="p.preco" /></td>
                                                 <td><mtw:out value="p.quantidade" /></td>
+                                                <td><p><a href="ProdutoAction.excluir.mtw?id=<mtw:out value="p.codigo"/>" class="btn btn-primary" role="button">Excluir</a></p></td>
                                             </tr>
                                         </mtw:loop> 
                                     </mtw:list>

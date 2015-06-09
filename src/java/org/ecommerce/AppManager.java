@@ -3,27 +3,23 @@ package org.ecommerce;
 import org.ecommerce.action.ClienteAction;
 import org.ecommerce.action.EcommerceAction;
 import org.ecommerce.action.FornecedorAction;
-import org.ecommerce.action.ItensAction;
+import org.ecommerce.action.VendasAction;
 import org.ecommerce.action.LoginAction;
 import org.ecommerce.action.LogoutAction;
 import org.ecommerce.action.ProdutoAction;
-import org.ecommerce.action.VendaAction;
 import org.ecommerce.dao.impl.ClienteDAOImpl;
 import org.ecommerce.dao.impl.FornecedorDAOImpl;
-import org.ecommerce.dao.impl.ItensDAOImpl;
+import org.ecommerce.dao.impl.VendasDAOImpl;
 import org.ecommerce.dao.impl.ProdutoDAOImpl;
 import org.ecommerce.modelo.Cliente;
 import org.ecommerce.modelo.Fornecedor;
-import org.ecommerce.modelo.Itens;
+import org.ecommerce.modelo.Vendas;
 import org.ecommerce.modelo.Produtos;
 import org.ecommerce.util.Strings;
 import org.mentabean.DBTypes;
 import org.mentabean.jdbc.MySQLBeanSession;
-import org.mentawai.core.Action;
 import org.mentawai.core.ActionConfig;
 import org.mentawai.core.ApplicationManager;
-import static org.mentawai.core.ApplicationManager.ERROR;
-import static org.mentawai.core.ApplicationManager.LOGIN;
 import static org.mentawai.core.ApplicationManager.SUCCESS;
 import static org.mentawai.core.ApplicationManager.fwd;
 import static org.mentawai.core.ApplicationManager.redir;
@@ -82,22 +78,25 @@ public class AppManager extends ApplicationManager {
                 .bypassAuthentication()
                 .on(SUCCESS, fwd("index.jsp"));
         
-        /*action("/ItensAction", ItensAction.class, "finalizaCompra")
-                .on(SUCCESS, fwd("/jsp/finalizaCompra.jsp"));*/
-        
-        action("/ItensAction", ItensAction.class, "salvar")
+        action("/VendasAction", VendasAction.class, "salvar")
                 .bypassAuthentication()
-                .on(SUCCESS, fwd("/jsp/single-page.jsp"));
+                .on(SUCCESS, fwd("index.jsp"));
         
         /*----------------------------------------------------
          ADMINISTRATIVO
          -----------------------------------------------------*/
+        action("/EcommerceAction", EcommerceAction.class, "home")
+                .on(SUCCESS, fwd("/jsp/adm/adm.jsp"));
+        
         action("/ProdutoAction", ProdutoAction.class, "cadProdutos")
                 .on(SUCCESS, fwd("/jsp/adm/cadProdutos.jsp"));
         
         action("/ProdutoAction", ProdutoAction.class, "salvar")
                 .on(SUCCESS, fwd("/jsp/adm/cadProdutos.jsp"));
 
+        action("/ProdutoAction", ProdutoAction.class, "excluir")
+                .on(SUCCESS, fwd("/jsp/adm/cadProdutos.jsp"));
+        
         action("/FornecedorAction", FornecedorAction.class, "cadForn")
                 .on(SUCCESS, fwd("/jsp/adm/cadForn.jsp"));
 
@@ -106,10 +105,11 @@ public class AppManager extends ApplicationManager {
         
         action("/ClienteAction", ClienteAction.class, "listarClientes") 
                 .on(SUCCESS, fwd("/jsp/adm/clientes.jsp"));
-
-        action("/VendaAction", VendaAction.class, "vendas")
+        
+        action("/VendasAction", VendasAction.class, "listarVendas") 
                 .on(SUCCESS, fwd("/jsp/adm/vendas.jsp"));
-    }
+
+        }
 
     @Override
     public void loadBeans() {
@@ -118,8 +118,9 @@ public class AppManager extends ApplicationManager {
                 .pk("codigo", DBTypes.AUTOINCREMENT)
                 .field("nome", DBTypes.STRING)
                 .field("cpf", DBTypes.STRING)
-                .field("tel", DBTypes.STRING)
-                .field("end", DBTypes.STRING);
+                .field("end", DBTypes.STRING)
+                .field("tel", DBTypes.STRING);
+                
 
         // Tabela Fornecedor
         bean(Fornecedor.class, "Fornecedor")
@@ -137,11 +138,13 @@ public class AppManager extends ApplicationManager {
                 .field("cod_forn", DBTypes.INTEGER)//FK
                 .field("quantidade", DBTypes.INTEGER); 
             
-         //Tabela Itens
-        bean(Itens.class, "Itens")
-                .pk("ite_codigo", DBTypes.AUTOINCREMENT)
-                .field("ite_qtd", DBTypes.INTEGER)
-                .field("ite_valor_parcial", DBTypes.DOUBLE);
+         //Tabela Vendas
+        bean(Vendas.class, "Venda")
+                .pk("codigo", DBTypes.AUTOINCREMENT)
+                .field("ite_quantidade", DBTypes.INTEGER)
+                .field("ite_valor_parcial", DBTypes.DOUBLE)
+                .field("cod_prod", DBTypes.INTEGER)  //FK
+                .field("cod_cli", DBTypes.INTEGER); //FK
                 
     }
 
@@ -152,7 +155,7 @@ public class AppManager extends ApplicationManager {
         ioc("clienteDAO", ClienteDAOImpl.class);
         ioc("fornecedorDAO",FornecedorDAOImpl.class);
         ioc("produtoDAO", ProdutoDAOImpl.class);
-        ioc("itensDAO", ItensDAOImpl.class);
+        ioc("vendasDAO", VendasDAOImpl.class);
     }
     
     @Override

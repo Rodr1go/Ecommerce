@@ -12,4 +12,6 @@ public interface ClienteDAO {
     public boolean salvar(Cliente c);
     
     public List<Cliente> listarTodos();
+    
+    public Cliente buscarPorCodigo(int codigo);
 }
